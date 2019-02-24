@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Home — CS121 Project 3{% endblock %}
+{% block content %}
+<h1>Search</h1>
+<form action="/search" method="post" novalidate>
+    <p>{{ form.search(placeholder="Search here") }}</p>
+    <p>{{ form.submit }}</p>
+</form>
+{% endblock %}

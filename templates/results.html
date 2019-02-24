@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Search Results — CS121 Project 3{% endblock %}
+{% block content %}
+{% if results %}
+  <h1>Results</h1>
+  <p class="details">Showing the top 10 results</p>
+    <ol>
+    {% for user in results %}
+    <div class="results_list">
+      <li><a href="http://{{user}}">{{ user }}</a></li></br></br>
+      </div>
+    {% endfor %}
+    </ol>
+    {% else %}
+      <h1>No Results</h1>
+  {% endif %}
+  </ol>
+{% endblock %}
